@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#captions {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #272727;
+    background-color: #e6e6e6;
+    width: 95%;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    max-height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    overflow-y: scroll;
+    border: 1px solid #20232a;
+}
+
+header {
+    flex-wrap: wrap;
+
+}
+
+/* Basic styling for the error message */
+.error-message {
+    background-color: #f44336;
+    /* Red color */
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(-20px);
+    /* Slide in effect */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 9999;
+    /* Make sure it's on top */
+}
+
+.error-message.show {
+    opacity: 1;
+    transform: translateY(0);
+    /* Slide into view */
+}
+
+.error-message button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* To hide the error message */
+.hide {
+    display: none;
+}
+
+#captions p {
+    margin: 15px;
+    font-size: 18px;
+
+}
+
+.captions.hide {
+    display: none;
+}
+
+.captions::before {
+    content: "";
+    /* Initially empty */
+    display: block;
+    /* Ensure the content is visible */
+    font-size: 16px;
+    /* Set the size of the content */
+    color: #fff;
+    /* Set text color */
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark background for contrast */
+    border-radius: 5px;
+    /* Optional: rounded corners */
+    opacity: 0;
+    /* Make the text invisible initially */
+    transition: opacity 0.3s ease;
+    /* Smooth fade-in effect */
+    position: absolute;
+    cursor: pointer;
+    width: 100px;
+    top: 0;
+    right: 0;
+}
+
+.captions:hover::before {
+    content: "Copy";
+    /* Change content to "Copy" when hovered */
+    opacity: 1;
+    /* Make the text visible */
+}
+
+.loader {
+    border: 5px solid #bdbdbd;
+    width: 70px;
+    margin: auto;
+    height: 70px;
+    border-radius: 50%;
+    border-top: 5px solid #0056b3;
+    animation: rotate 1s linear infinite;
+}
+
+.loader.hide {
+    display: none;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#captions br {
+    display: block;
+    margin-bottom: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.thumbnail img {
+    max-width: 100%;
+
+}
+
+.thumbnail a {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.thumbnail button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+
+    border-radius: 8px;
+
+}
+
+
+form input[type="url"] {
+    width: 80%;
+    padding: 12px 16px;
+    margin-right: 10px;
+    border: 2px solid #0056b3;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+
+}
+
+form {
+    gap: 10px;
+}
+
+
+form input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+
+form button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+
+form button i {
+    font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    form input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+footer {
+    background-color: #20232a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+header {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffe259;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hero .cta {
+    padding: 10px 20px;
+    background: #ff416c;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero .cta:hover {
+    background: #ff4b2b;
+}
+
+section {
+    padding: 30px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+section p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+section ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+}

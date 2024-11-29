@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="YouTube Caption Downloader | Free Subtitle Download Tool">
+    <meta name="description"
+        content="Easily download YouTube captions and subtitles. Our free online tool supports auto-generated captions, multiple languages, timestamps, and more.">
+    <meta name="keywords"
+        content="YouTube caption downloader, YouTube subtitle downloader, download YouTube captions, download YouTube subtitles, YouTube subtitles in SRT, YouTube captions VTT, free YouTube subtitle tool, YouTube short captions, YouTube live captions, subtitle downloader online">
+    <meta name="author" content="CaptionGrab Team">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="YouTube Caption Downloader | Free Subtitle Download Tool">
+    <meta property="og:description"
+        content="Quickly and easily download YouTube captions and subtitles in multiple formats. Our tool supports auto-generated captions and multi-language options.">
+    <meta property="og:image" content="caption.png">
+    <meta property="og:url" content="https://captiongrab.vercel.app/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YouTube Caption Downloader | Free Subtitle Download Tool">
+    <meta name="twitter:description"
+        content="Download YouTube captions and subtitles effortlessly. Supports SRT, VTT, and text formats with auto-generated multi-language options.">
+    <meta name="twitter:image" content="caption.png">
+
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://captiongrab.vercel.app/">
+
+    <!-- Favicon Icon -->
+    <link rel="icon" href="caption.png" type="image/png">
+
+
+
+    <meta name="google-site-verification" content="bTRlMgrBbckq_jgRj0Eiw0ds2p2lBt0zADKkc6Ydch0" />
+    <title>Free YouTube Caption Downloader Tool | Download YouTube Subtitles </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="./favicon-32x32.png">
+</head>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "YouTube Caption Downloader",
+  "description": "Download YouTube captions and subtitles in multiple formats, including SRT and VTT, with support for auto-generated captions and multi-language options.",
+  "url": "https://captiongrab.vercel.app/"
+}
+</script>
+
+
+<body>
+    <header>
+        <div class="logo">CaptionGrab<i class="fa-solid fa-closed-captioning"></i></div>
+        <nav class="nav">
+            <a href="#features">Features</a>
+            <a href="#how-to-use">How to Use</a>
+            <a href="#faq">FAQs</a>
+            <a href="#why-us">Why us</a>
+
+        </nav>
+    </header>
+    <main>
+
+        <section class="hero">
+            <h1>YouTube Caption and Subtitle Downloader</h1>
+            <p>Download YouTube captions and subtitles effortlessly with our versatile tool—perfect for creators,
+                educators, and developers!</p>
+            <form action="/" method="get">
+                <input type="url" name="url" placeholder="Enter YouTube URL" required id="youtube-url">
+                <button type="submit">
+                    <i class="fa-solid fa-download"></i>
+                </button>
+               
+            </form>
+            <div id="error-message" class="error-message hide">
+                <span id="error-text"></span>
+                <button onclick="closeError()"><i class="fa fa-close"></i></button>
+            </div>
+        </section>
+
+
+        <div class="loader hide" id="loader"></div>
+        <div class="captions hide" id="captions" onclick="copytext()">
+            
+
+        </div>
+        <!-- Error message div (initially hidden) -->
+
+
+
+        <section>
+
+            <section>
+                <h2>Download YouTube Captions and Subtitles Effortlessly with Our Tool</h2>
+                <p>
+                    Are you looking for a <strong>YouTube caption downloader</strong> or
+                    <strong>YouTube subtitle downloader</strong> to save captions and subtitles for offline use?
+                    Our tool is designed to make this process quick, easy, and efficient, whether you're extracting
+                    captions for personal use, research, or accessibility needs. With a user-friendly interface,
+                    you can copy the YouTube video URL, paste it into the input box, and grab captions or subtitles
+                    instantly.
+                </p>
+            </section>
+
+            <section id="features">
+                <h2>Key Features of Our YouTube Caption and Subtitle Downloader</h2>
+                <ol>
+                    <li>
+                        <strong>Download YouTube Captions in Multiple Formats</strong><br>
+                        Whether you need captions as plain text, SRT, or VTT files, our tool supports various formats.
+                        Perfect for content creators and researchers looking to analyze transcripts.
+                    </li>
+                    <li>
+                        <strong>Compatible with Auto-Generated Captions</strong><br>
+                        Download YouTube auto-generated subtitles in multiple languages, including English, Spanish, and
+                        more.
+                        Get precise transcripts even from auto-captioned videos.
+                    </li>
+                    <li>
+                        <strong>Subtitle Extraction for All Devices</strong><br>
+                        Use our tool on desktops, mobile phones, or tablets. It's optimized for Chrome, Firefox, and all
+                        modern browsers.
+                    </li>
+                    <li>
+                        <strong>Download Subtitles with Timestamps</strong><br>
+                        Keep track of the video’s flow with subtitles that include timestamps for seamless
+                        synchronization.
+                    </li>
+                    <li>
+                        <strong>Supports YouTube Shorts and Live Captions</strong><br>
+                        Whether it's a full-length video, a YouTube Short, or live-streamed content, our tool can grab
+                        captions effectively.
+                    </li>
+                </ol>
+            </section>
+
+            <section id="how-to-use">
+                <h2>How to Use Our YouTube Caption and Subtitle Downloader</h2>
+                <ol>
+                    <li>Copy the <strong>YouTube video URL</strong>.</li>
+                    <li>Paste it into the input box on our website.</li>
+                    <li>Download the captions or subtitles instantly.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Why Choose Our Tool?</h2>
+                <ul>
+                    <li><strong>Free to Use:</strong> No hidden fees or subscriptions—download captions and subtitles
+                        without any cost.</li>
+                    <li><strong>Fast and Reliable:</strong> Extract captions and subtitles in seconds, even for long
+                        videos.</li>
+                    <li><strong>No Software Needed:</strong> Our tool is entirely online, so you don’t need to install
+                        extensions or applications.</li>
+                    <li><strong>SEO Optimized Features:</strong> Perfect for video marketers looking to optimize YouTube
+                        captions for better discoverability.</li>
+                </ul>
+            </section>
+
+            <section id="why-us">
+                <h2>Who Can Benefit from This Tool?</h2>
+                <ul>
+                    <li><strong>Content Creators:</strong> Easily repurpose YouTube captions for blogs or social media
+                        posts.</li>
+                    <li><strong>Students and Researchers:</strong> Save captions for lectures, tutorials, and
+                        educational videos.</li>
+                    <li><strong>Accessibility Advocates:</strong> Ensure captions and subtitles are available for
+                        everyone.</li>
+                </ul>
+            </section>
+
+            <section id="faq">
+                <h2>Frequently Asked Questions (FAQs)</h2>
+                <p><strong>Q: How to download captions from a YouTube video?</strong><br>
+                    A: Simply copy the video link, paste it into our tool, and choose the desired format to download.
+                </p>
+                <p><strong>Q: Can I download auto-generated YouTube captions?</strong><br>
+                    A: Yes, our tool supports both manually uploaded and auto-generated captions.</p>
+                <p><strong>Q: Is it possible to download YouTube subtitles in multiple languages?</strong><br>
+                    A: Absolutely! Select your preferred language from the dropdown list before downloading.</p>
+            </section>
+
+            <section>
+                <h2>Top Keywords We Rank For</h2>
+                <ul>
+
+                    <li>How to download captions from YouTube</li>
+                    <li>Download YouTube subtitles as text</li>
+                    <li>YouTube subtitle download online free</li>
+                    <li>Best YouTube caption downloader</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Try Our Tool Today!</h2>
+                <p>
+
+                    With these features, our tool ensures you’ll never face the hassle of manually transcribing captions
+                    or subtitles again. Try our <strong>YouTube Caption and Subtitle Downloader</strong> today for a
+                    seamless experience!
+                    Don’t wait any longer. Start downloading YouTube captions and subtitles with ease. Whether it’s for
+                    personal use, education, or marketing, our tool ensures fast and hassle-free downloads
+                </p>
+            </section>
+
+
+
+        </section>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Alizaib. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+
+    // Function to display the error message
+    function showError(message) {
+        const errorDiv = document.getElementById("error-message");
+        const errorText = document.getElementById("error-text");
+    
+        // Set the error message text
+        errorText.textContent = message;
+    
+        // Make the error message visible
+        errorDiv.classList.remove("hide");
+        errorDiv.classList.add("show");
+    }
+    
+    // Function to close the error message
+    function closeError() {
+        const errorDiv = document.getElementById("error-message");
+    
+        // Hide the error message smoothly
+        errorDiv.classList.remove("show");
+        setTimeout(() => {
+            errorDiv.classList.add("hide");
+        }, 300);
+    }
+    
+    // Function to copy the captions text to the clipboard
+    function copytext() {
+        const text = document.getElementById("captions").innerText;
+        window.navigator.clipboard.writeText(text).then(() => {
+            alert("Text copied!");
+        }).catch(err => {
+            console.error("Error copying text: ", err);
+        });
+    }
+    
+    // Function to toggle the loader and captions visibility
+    function toggleLoader() {
+        document.getElementById("loader").classList.toggle("hide");
+    }
+    
+    // Handle form submission
+    document.getElementsByTagName("form")[0].addEventListener('submit', function (e) {
+        e.preventDefault();  // Prevent default form submission
+    
+        const url = document.getElementById('youtube-url').value;
+        const videoId = extractVideoId(url);
+    
+        if (videoId) {
+            toggleLoader();
+    
+            // Send request to the server to fetch captions
+            fetch("/get-subs", {
+                method: "POST",  // specify method as POST
+                headers: {
+                    "Content-Type": "application/json",  // set content type to JSON
+                },
+                body: JSON.stringify({ videoId: videoId })  // send videoId as JSON
+            })
+            .then(res => res.json())  // Parse JSON response
+            .then(subs => {
+                if (subs[0] === "Please choose another video") {
+                    // Try to fetch Hindi subtitles if English is not available
+                    fetch("/get-subs-hindi", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ videoId: videoId })
+                    })
+                    .then(res => res.json())
+                    .then(hindiSubs => {
+                        if (hindiSubs[0] === "Please choose another video") {
+                            showError("Please try with a different video.");
+                        } else {
+                            const hindiText = hindiSubs.map(caption => caption.text).join('<br>');
+                            const paragraph = `<p>${hindiText}</p>`;
+                            document.getElementById("captions").innerHTML = paragraph;
+                            document.getElementById("captions").classList.remove("hide");
+                        }
+                        toggleLoader(); // Hide loader after handling both cases
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        showError("Error fetching Hindi captions. Please try again.");
+                        toggleLoader();
+                    });
+                } else {
+                    const text = subs.map(caption => caption.text).join('<br>');
+                    const paragraph = `<p>${text}</p>`;
+                    document.getElementById("captions").innerHTML = paragraph;
+                    document.getElementById("captions").classList.remove("hide");
+                    toggleLoader(); // Hide loader after captions are fetched
+                }
+            })
+            .catch(err => {
+                console.log(err);
+                showError("Error fetching captions. Please try again.");
+                toggleLoader(); // Hide loader after error
+            });
+        } else {
+            showError("Please enter a valid YouTube URL.");
+        }
+    });
+    
+    // Function to extract video ID from YouTube URL
+    function extractVideoId(url) {
+        const regex = /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+        const match = url.match(regex);
+        return match ? match[1] : null;
+    }
+    
+    </script>
+    
+
+
+</html>
